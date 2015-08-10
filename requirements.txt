@@ -1,0 +1,6 @@
+flask
+oslo.log
+oslo.config
+oslo.concurrency
+python-keystoneclient
+python-neutronclient
