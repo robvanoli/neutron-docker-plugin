@@ -174,7 +174,7 @@ def delete_network():
                 os_client.neutron().delete_subnet(subnet)
             os_client.neutron().delete_network(network['id'])
     except Exception as e:
-        error = "Delete network failed" % e
+        error = "Delete network failed: %s" % e
         LOG.error(error)
         return jsonify({'Err': error})
 
