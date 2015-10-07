@@ -351,7 +351,7 @@ def delete_endpoint():
 
     try:
         for port in ports:
-            os_client.neutron.delete_port(port['id'])
+            os_client.neutron().delete_port(port['id'])
     except Exception as e:
         error = "Failed to delete endpoint: %s" % e
         return jsonify({'Err': error})
